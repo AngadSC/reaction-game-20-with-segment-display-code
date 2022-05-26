@@ -44,3 +44,28 @@ function two () {
     pins.analogWritePin(AnalogPin.P13, 1023)
     pins.analogWritePin(AnalogPin.P14, 1023)
 }
+function seven () {
+    clear_screen()
+    pins.analogWritePin(AnalogPin.P0, 1023)
+    pins.analogWritePin(AnalogPin.P1, 1023)
+    pins.analogWritePin(AnalogPin.P15, 1023)
+}
+function six () {
+    clear_screen()
+    pins.analogWritePin(AnalogPin.P0, 1023)
+    pins.analogWritePin(AnalogPin.P2, 1023)
+    pins.analogWritePin(AnalogPin.P12, 1023)
+    pins.analogWritePin(AnalogPin.P13, 1023)
+    pins.analogWritePin(AnalogPin.P14, 1023)
+    pins.analogWritePin(AnalogPin.P15, 1023)
+}
+loops.everyInterval(500, function () {
+    clear_screen()
+    one()
+    two()
+    three()
+    four()
+    five()
+    six()
+    seven()
+})
