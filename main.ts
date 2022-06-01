@@ -112,6 +112,12 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
+    if (game.score() == 5) {
+        clear_screen()
+        basic.showString("WINNER")
+    }
+})
+basic.forever(function () {
     if (game.score() == 0) {
         clear_screen()
         basic.pause(2000)
@@ -129,12 +135,6 @@ basic.forever(function () {
         basic.pause(2000)
         seven()
         basic.pause(2000)
-    }
-})
-basic.forever(function () {
-    if (game.score() == 5) {
-        clear_screen()
-        basic.showString("WINNER")
     }
 })
 basic.forever(function () {
