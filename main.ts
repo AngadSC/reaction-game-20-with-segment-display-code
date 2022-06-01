@@ -3,6 +3,7 @@ function one () {
     clear_screen()
     pins.analogWritePin(AnalogPin.P1, 1023)
     pins.analogWritePin(AnalogPin.P15, 1023)
+    trigger = 0
 }
 function clear_screen () {
     pins.analogWritePin(AnalogPin.P0, 0)
@@ -22,6 +23,7 @@ function three () {
     pins.analogWritePin(AnalogPin.P12, 1023)
     pins.analogWritePin(AnalogPin.P14, 1023)
     pins.analogWritePin(AnalogPin.P15, 1023)
+    trigger = 0
 }
 input.onButtonPressed(Button.A, function () {
     if (trigger == 1) {
@@ -38,6 +40,7 @@ function five () {
     pins.analogWritePin(AnalogPin.P12, 1023)
     pins.analogWritePin(AnalogPin.P14, 1023)
     pins.analogWritePin(AnalogPin.P15, 1023)
+    trigger = 0
 }
 function four () {
     clear_screen()
@@ -45,6 +48,7 @@ function four () {
     pins.analogWritePin(AnalogPin.P2, 1014)
     pins.analogWritePin(AnalogPin.P12, 1023)
     pins.analogWritePin(AnalogPin.P15, 1023)
+    trigger = 0
 }
 function two () {
     clear_screen()
@@ -53,6 +57,7 @@ function two () {
     pins.analogWritePin(AnalogPin.P12, 1023)
     pins.analogWritePin(AnalogPin.P13, 1023)
     pins.analogWritePin(AnalogPin.P14, 1023)
+    trigger = 0
 }
 function seven () {
     clear_screen()
@@ -69,14 +74,23 @@ function six () {
     pins.analogWritePin(AnalogPin.P13, 1023)
     pins.analogWritePin(AnalogPin.P14, 1023)
     pins.analogWritePin(AnalogPin.P15, 1023)
+    trigger = 0
 }
 loops.everyInterval(500, function () {
     clear_screen()
+    basic.pause(500)
     one()
+    basic.pause(500)
     two()
+    basic.pause(500)
     three()
+    basic.pause(500)
     four()
+    basic.pause(500)
     five()
+    basic.pause(500)
     six()
+    basic.pause(500)
     seven()
+    basic.pause(500)
 })
